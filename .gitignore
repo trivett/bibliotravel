@@ -18,8 +18,12 @@
 *.sublime*
 
 # ignore zeus
-
 zeus.json
 custom_plan.rb
+
 # Ignore application configuration
 /config/application.yml
+
+.DS_Store
+
+
