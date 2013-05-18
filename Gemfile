@@ -21,10 +21,15 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'koala' #sign in with facebook
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
+
+
+# authentication
+gem 'omniauth-facebook'
+gem 'koala' 
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
