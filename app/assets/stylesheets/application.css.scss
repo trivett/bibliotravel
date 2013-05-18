@@ -14,6 +14,8 @@
 
 
 
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab);
+
 /* HEADER */
 
 #user_nav {
@@ -21,11 +23,18 @@
   padding: 0.5em 1em 0 0;
 }
 
+#logo{
+  float: left;
+}
+
 /* MAIN */
 
-#container{
-  margin-left: 100px;
+#landing{
+
+  vertical-align: top;
 }
+
+
 
 /* FOOTER */
 
@@ -36,4 +45,10 @@
 
 
 /* MISC */
+
+h1,h2,h3 {
+  font-family: 'Roboto Slab', serif;
+
+}
+
 
