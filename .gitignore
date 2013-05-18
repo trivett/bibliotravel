@@ -13,3 +13,11 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# ignore sublime
+*.sublime*
+
+# ignore zeus
+
+zeus.json
+custom_plan.rb
