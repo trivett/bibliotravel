@@ -1,7 +1,7 @@
 <div id="user_nav">
   <% if current_user.present? %>
     Signed in as <strong><%= current_user.name %></strong>
-    Sign out <%= link_to  %>
+    <%= link_to 'Sign out', signout_path %>
   <% else %>
     <%= link_to 'Sign in with Facebook', '/auth/facebook', id: 'sign_in' %>
   <% end %>

@@ -1,7 +1,7 @@
 Bibliotravel::Application.routes.draw do
 
   get "sessions/create"
-
+  get '/signout' => 'sessions#destroy', :as => :signout
 
 
   root :to => 'welcome#index'
