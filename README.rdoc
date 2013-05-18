@@ -1,0 +1,16 @@
+When in Rome, read about Rome.
+
+BiblioTravel helps you find good reads for your travels.
+
+You can find suggestions to read book based on where you are or where you are going. Reading a novel set in a place is a great way to learn and experience a new location.
+
+
+
+User Story:
+
+Sign in with Facebook
+
+
+
+
+Option 1:
