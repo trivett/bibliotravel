@@ -1,10 +1,19 @@
 
 
 <div class="span9"> <!-- Hero Unit -->
+
+
+
           <div class="hero-unit">
             <h1>Welcome!</h1>
             <p>Are you interested in finding books related to New York?<p>
-            <p><a href="#" class="btn btn-primary btn-large">Yes!</a></p>
+
+            <% if current_user.present? %>
+             <p> Welcome back, <strong><%= current_user.name %></strong>!</p>
+              <% else %>
+                <%= link_to 'Sign in with Facebook to get started', '/auth/facebook', id: 'sign_in' %>
+              <% end %>
+
             <div class="page-header">
               <h2>Interested in another city?</h2>
               <form class="form-search">
