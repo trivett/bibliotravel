@@ -27,7 +27,7 @@ gem "twitter-bootstrap-rails"
 
 
 # authentication
-gem 'omniauth-facebook'
+gem 'omniauth-facebook', '1.4.0'
 gem 'koala' 
 gem 'figaro'
 
