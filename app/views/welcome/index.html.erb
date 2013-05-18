@@ -6,10 +6,11 @@
 
           <div class="hero-unit">
             <h1>Welcome to BiblioTravel!</h1>
-            <p> You can search for books that take place in <strong>
-              <script language="Javascript">
-              document.write(" "+geoplugin_city()+", "+geoplugin_countryName());
-  </script> </strong> or find a good book that takes place in another city.</p>
+              <p> You can search for books that take place in <strong>
+                <script language="Javascript">
+                document.write(" "+geoplugin_city()+", "+geoplugin_countryName());</script>
+
+              </strong> or find a good book that takes place in another city.</p>
 
             <% if current_user.present? %>
              <p> Welcome back, <strong><%= current_user.name %></strong>!</p>
