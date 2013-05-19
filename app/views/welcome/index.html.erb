@@ -7,7 +7,7 @@
           <div class="hero-unit">
             <h1>Welcome to BiblioTravel!</h1>
               <p> You can search for books that take place in <strong>
-                <%= request.ip %>
+                <%= @city %>
               </strong> or find a good book that takes place in another city.</p>
 
             <% if current_user.present? %>
