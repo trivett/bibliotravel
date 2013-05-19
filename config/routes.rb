@@ -4,6 +4,8 @@ Bibliotravel::Application.routes.draw do
 
   get "books/show"
 
+  get 'books/search'
+
   get "sessions/create"
 
 

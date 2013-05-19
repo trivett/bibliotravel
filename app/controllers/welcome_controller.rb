@@ -5,4 +5,8 @@ class WelcomeController < ApplicationController
     @authors = @city.authors.limit(5)
   end
 
+
+  def show
+    @books = Book.search(params[:search])
+  end
 end
