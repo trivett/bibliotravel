@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(:version => 20130519093411) do
     t.datetime "date"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "city_id"
+    t.integer  "author_id"
   end
 
   create_table "cities", :force => true do |t|
