@@ -36,6 +36,18 @@
   float:right;
 }
 
+h1,h2,h3,h4,a.brand,p {
+  font-family: 'Open Sans', serif;
+
+}
+
+p,th,td {
+  font-size: 1.4em;
+}
+
+p.intro {
+  padding-bottom: 1.2em;
+}
 
 section {
   margin: 2em 0 2em 0 !important;
@@ -50,13 +62,5 @@ section {
 
 /* MISC */
 
-h1,h2,h3,h4,a.brand,p {
-  font-family: 'Open Sans', serif;
-
-}
-
-p,th,td {
-  font-size: 1.4em;
-}
 
 
