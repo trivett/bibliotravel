@@ -15,7 +15,7 @@
 
             <% if current_user.present? %>
              <p> Welcome back!</p>
-             <p>Here are some books that take place in <strong><%= @city %></strong>:</p>
+             <p>Here are some books that take place in <strong><%= @city.name %></strong>:</p>
              <table class='table-striped'>
               <thead>
                 <th>Title</th>
@@ -25,15 +25,26 @@
               <% @books.each do |b| %>
                 <tr>
                    <td><%= b.title %></td>
-                   <td><%= b.author %></td>
+                   <td><%= b.author.name %></td>
                 </tr>
                <% end %>
               </table>
-              <p>Here are some authors associated with <strong><%= @city %></strong>:</p>
-              
-              <p>And here are some famous literary events from <strong><%= @city %></strong></p>
+              <p>Here are some authors associated with <strong><%= @city.name %></strong>:</p>
+              <table class='table-striped'>
+              <thead>
+                <th>Name</th>
+                <th>Bio</th>
+              </thead>
+              <tbody>
+              <% @authors.each do |a| %>
+                <tr>
+                   <td><%= a.name %></td>
+                   <td><%= a.blurb %></td>
+                </tr>
+               <% end %>
+
+              <p>And here are some famous literary events from <strong><%= @city.name %></strong></p>
             <% end %>
-            <%= paginate @books %>
 
 
 </div> <!-- Hero Unit -->

@@ -1,7 +1,7 @@
 class Book < ActiveRecord::Base
-  attr_accessible :author, :city, :date, :title
-  belongs_to :author, :inverse_of => :book
-  belongs_to :city, :inverse_of => :city
+  attr_accessible :author, :city, :date, :title, :city_id, :author_id
+  belongs_to :author
+  belongs_to :city
 
   def self.search(search)
     if search

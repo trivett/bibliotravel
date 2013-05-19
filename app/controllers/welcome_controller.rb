@@ -1,7 +1,8 @@
 class WelcomeController < ApplicationController
   def index
-    @city = request.location.city
-    @books = Book.where(:city => @city).page(4).per(10)
+    @city = City.first
+    @books = Book.where(:city_id => @city.id).limit(15)
+    @authors = @city.authors.limit(5)
   end
 
 end
