@@ -6,7 +6,8 @@
 
           <% unless current_user.present? %>
             <div class="hero-unit">
-              <h1>Welcome to BiblioTravel!</h1>
+                        <%= image_tag "logo.png", :id => "logo"%>
+  <h1>Welcome to BiblioTravel!</h1>
                 <p> You can search for books that take place in <strong>
                   <%= @city %>
                 </strong> or find a good book that takes place in another city.</p>
