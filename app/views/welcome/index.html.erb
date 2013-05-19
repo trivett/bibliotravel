@@ -16,10 +16,14 @@
             <% if current_user.present? %>
              <p> Welcome back<strong>!</p>
              <p>Here are some books you might like, based on the fact alone that our robots have geolocatd you in <%= @city %>:</p>
-             <% @books.each do |b| %>
-               <%= b.title %>
-               <%= b.author %>
-             <% end %>
+             <table class='table-striped'>
+              <th>Title</th>
+              <th>Author</th>
+               <% @books.each do |b| %>
+                 <td><%= b.title %></td>
+                 <td><%= b.author %></td>
+               <% end %>
+              </table>
             <% end %>
 
 
