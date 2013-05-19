@@ -28,9 +28,9 @@ gem "twitter-bootstrap-rails"
 
 # authentication
 gem 'omniauth-facebook', '1.4.0'
-gem 'koala' 
+gem 'koala'
 gem 'figaro'
-
+gem 'simple_form'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
