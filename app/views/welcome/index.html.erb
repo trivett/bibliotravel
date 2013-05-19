@@ -4,19 +4,34 @@
 
 
 
-          <div class="hero-unit">
-            <h1>Welcome to BiblioTravel!</h1>
-              <p> You can search for books that take place in <strong>
-                <script language="Javascript">
-                document.write(" "+geoplugin_city()+", "+geoplugin_countryName());</script>
-
-              </strong> or find a good book that takes place in another city.</p>
+          <% unless current_user.present? %>
+            <div class="hero-unit">
+              <h1>Welcome to BiblioTravel!</h1>
+                <p> You can search for books that take place in <strong>
+                  <%= @city %>
+                </strong> or find a good book that takes place in another city.</p>
+                <%= link_to 'Sign in with Facebook to get started', '/auth/facebook', id: 'sign_in' %>
+          <% end %>
 
             <% if current_user.present? %>
-             <p> Welcome back, <strong><%= current_user.name %></strong>!</p>
-              <% else %>
-                <%= link_to 'Sign in with Facebook to get started', '/auth/facebook', id: 'sign_in' %>
-              <% end %>
+             <p> Welcome back!</p>
+             <p>Here are some books you might like, based on the very simple but telling rubric that our robots have geolocated you in <strong><%= @city %></strong>:</p>
+             <table class='table-striped'>
+              <thead>
+                <th>Title</th>
+                <th>Author</th>
+              </thead>
+              <tbody>
+              <% @books.each do |b| %>
+                <tr>
+                   <td><%= b.title %></td>
+                   <td><%= b.author %></td>
+                </tr>
+               <% end %>
+              </table>
+            <% end %>
+            <%= paginate @books %>
 
 
 </div> <!-- Hero Unit -->
+
