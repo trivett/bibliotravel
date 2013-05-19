@@ -13,7 +13,7 @@ Author.delete_all
 
 c1 = City.create(name: 'New York', country: 'USA')
 c2 = City.create(name: 'San Francisco', country: 'USA')
-Author.create(name: 'Herman Melville', city_id: c1.id, blurb: String.encode('(August 1, 1819 – September 28, 1891) American novelist, short story writer, essayist, and pffoet. He is best known for his novel Moby-Dick. His first three books gained much contemporary attention (the first, Typee, became a bestseller), but after a fast-blooming literary success in the late 1840s, his popularity declined precipitously in the mid-1850s and never recovered during his lifetime.'))
+Author.create(name: 'Herman Melville', city_id: c1.id, blurb: String.encode('American novelist, short story writer, essayist, and pffoet. He is best known for his novel Moby-Dick. His first three books gained much contemporary attention (the first, Typee, became a bestseller), but after a fast-blooming literary success in the late 1840s, his popularity declined precipitously in the mid-1850s and never recovered during his lifetime.')
 
 file1 = Rails.root + "nybooks.csv"
 file2 = Rails.root + "sfbooks.csv"
