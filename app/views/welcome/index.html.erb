@@ -1,59 +1,72 @@
 
 <div class="span10" id="landing" class="clearfix">
-<div class="span9"> <!-- Hero Unit -->
+
+  <% unless current_user.present? %>
+    <div class="hero-unit">
+                <%= image_tag "logo.png", :id => "logo"%>
+      <h1>Welcome to Book City!</h1>
+        <p> You can search for books that take place in <strong>
+          <%= @city.name %>
+        </strong> or find a good book that takes place in another city.</p>
+        <%= link_to 'Sign in with Facebook to get started', '/auth/facebook', id: 'sign_in' %>
+    </div> <!-- Hero Unit -->
+  <% end %>
+
+    <% if current_user.present? %>
+     <p> Welcome back!</p>
+     <div class="row">
+     <section class="books">
+       <p>Here are some books that take place in <strong><%= @city.name %></strong>:</p>
+       <table class='table-striped'>
+        <thead>
+          <th>Title</th>
+          <th>Author</th>
+        </thead>
+        <tbody>
+        <% @books.each do |b| %>
+          <tr>
+             <td><%= b.title %></td>
+             <td><%= b.author.name %></td>
+          </tr>
+         <% end %>
+        </table>
+      </section>
 
 
-
-          <% unless current_user.present? %>
-            <div class="hero-unit">
-                        <%= image_tag "logo.png", :id => "logo"%>
-              <h1>Welcome to Book City!</h1>
-                <p> You can search for books that take place in <strong>
-                  <%= @city.name %>
-                </strong> or find a good book that takes place in another city.</p>
-                <%= link_to 'Sign in with Facebook to get started', '/auth/facebook', id: 'sign_in' %>
-            </div> <!-- Hero Unit -->
+      <section class="authors">
+        <p>Here are some authors associated with <strong><%= @city.name %></strong>:</p>
+          <table class='table-striped'>
+          <thead>
+            <th>Name</th>
+            <th>Bio</th>
+          </thead>
+          <tbody>
+          <% @authors.each do |a| %>
+            <tr>
+               <td><%= a.name %></td>
+              <td><%= image_tag 'melville.jpg' %></td>
+               <td><%= a.blurb %></td>
+            </tr>
+          </table>
           <% end %>
+      </section>
 
-            <% if current_user.present? %>
-             <p> Welcome back!</p>
-             <section class="books">
-               <p>Here are some books that take place in <strong><%= @city.name %></strong>:</p>
-               <table class='table-striped'>
-                <thead>
-                  <th>Title</th>
-                  <th>Author</th>
-                </thead>
-                <tbody>
-                <% @books.each do |b| %>
-                  <tr>
-                     <td><%= b.title %></td>
-                     <td><%= b.author.name %></td>
-                  </tr>
-                 <% end %>
-                </table>
-              </section>
-              <section class="authors">
-                <p>Here are some authors associated with <strong><%= @city.name %></strong>:</p>
-                  <table class='table-striped'>
-                  <thead>
-                    <th>Name</th>
-                    <th>Bio</th>
-                  </thead>
-                  <tbody>
-                  <% @authors.each do |a| %>
-                    <tr>
-                       <td><%= a.name %></td>
-                      <td><%= image_tag 'melville.jpg' %></td>
-                       <td><%= a.blurb %></td>
-                    </tr>
-                  </table>
-                  <% end %>
-              </section>
-              <section class="events">
-                <p>And here are some famous literary events from <strong><%= @city.name %></strong></p>
-              </section>
-           <% end %>
-
+      <section class="events">
+        <p>And here are some famous quotes from <strong><%= @city.name %></strong> writers:</p>
+          <table class='table-striped'>
+          <thead>
+            <th>Author</th>
+            <th>Quote</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Langston Hughes</td>
+              <td>I live in Harlem, New York City.  I am unmarried. I like 'Tristan,' goat's milk, short novels, lyric poems, heat, simple folk, boats and bullfights; I dislike 'Aida,' parsnips, long novels, narrative poems, cold, pretentious folk, buses and bridges</td>
+            </tr>
+          </tbody>
+          </table>
+      </section>
+   <% end %>
+</div>
 
 
