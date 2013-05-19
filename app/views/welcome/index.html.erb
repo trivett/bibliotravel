@@ -15,7 +15,7 @@
 
             <% if current_user.present? %>
              <p> Welcome back!</p>
-             <p>Here are some books you might like, given that our robots have geolocated you in <strong><%= @city %></strong>:</p>
+             <p>Here are some books that take place in <strong><%= @city %></strong>:</p>
              <table class='table-striped'>
               <thead>
                 <th>Title</th>
@@ -29,6 +29,9 @@
                 </tr>
                <% end %>
               </table>
+              <p>Here are some authors associated with <strong><%= @city %></strong>:</p>
+              
+              <p>And here are some famous literary events from <strong><%= @city %></strong></p>
             <% end %>
             <%= paginate @books %>
 
