@@ -27,6 +27,11 @@ gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
 
+### Development
+
+group :development do
+  gem "better_errors"
+end
 
 # authentication
 gem 'omniauth-facebook', '1.4.0'
