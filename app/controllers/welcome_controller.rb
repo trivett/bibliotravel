@@ -6,7 +6,7 @@ class WelcomeController < ApplicationController
     else
       @city = City.find(:name => city)
     end
-    @books = Book.where(:city_id => @city.id).limit(15)
+     @books = Book.where(:city_id => @city.id).limit(15)
     @authors = @city.authors.limit(5)
   end
 
