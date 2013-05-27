@@ -27,3 +27,5 @@ custom_plan.rb
 .DS_Store
 
 
+# db config
+/config/database.yml
