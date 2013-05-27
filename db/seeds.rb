@@ -11,6 +11,9 @@ City.delete_all
 Book.delete_all
 Author.delete_all
 
+
+authors = %w()
+
 c1 = City.create(name: 'New York', country: 'USA')
 c2 = City.create(name: 'San Francisco', country: 'USA')
 c3 = City.create(name: 'London', country: 'UK')
