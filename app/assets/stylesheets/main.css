@@ -46,6 +46,8 @@ p {
   padding: 40px; }
 button {
   font-family: Roboto, Helvetica, sans serif;
+background-image: none;
+  background-color: #2F2630;
 }
 
 @media (max-width: 650px) {
@@ -56,7 +58,7 @@ button {
     font-size: 14px;
   }
   .hero-unit {
-    padding:30px;
+    padding: 20px;
   }
 }
 

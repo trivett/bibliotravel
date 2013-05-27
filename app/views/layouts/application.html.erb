@@ -25,19 +25,19 @@
           <div class="span4">
             <%= link_to (image_tag "logo-wide.png"),  root_path, :id => "logo", :alt => "BookCities" %>
           </div>
-          <div class="span4 offset3">
-              <div class="masthead" >
-                  <ul class="nav nav-pills pull-right">
-                    <li><a href="discover.html">Discover Books</a></li>
-                    <li><a href="about.html">About</a></li>
-                  </ul>
-              </div>
-          </div>
+
       </header>
 
 
 <%= yield %>
-
+<footer class="span3 offset3">
+              <div class="masthead" >
+                  <ul class="nav nav-pills pull-right">
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                  </ul>
+              </div>
+          </footer>
   </div>
 </body>
 </html>
