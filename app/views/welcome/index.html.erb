@@ -51,11 +51,16 @@
             <h1>Discover the right book for your trip.</h1>
             <p class="lead">A good novel heightens the experience of a new city. BookCities can help you find the best read based on your destination. Just pick a place and go!</p>
             <div class="row4 offset3">
-                <form class="form-search" id="search">
+                <%= search_form_for @search do |f| %>
+                    <div class="field">
+                        <%= f.text_field 'Take me to', :placeholder => 'Take me to' %>
+                    </div>
+                <% end %>
+<!--                 <form class="form-search" id="search">
                     <input type="text" class="input-large search-query" placeholder="Take me to...">
                     <button type="submit" class="btn">Go!</button>
                 </form>
-            </div>
+ -->            </div>
         </div>
         <div class="row-fluid marketing">
           <div class="span6" class="frontsections">
