@@ -5,8 +5,8 @@ class Book < ActiveRecord::Base
 
   def self.search(search)
     if search
-      city_id = City.where(:name => search).first.id
-      where(:all, :conditions => ['city_id == ?', city_id])
+      city_id = City.where(:name => search.titleize).first.id
+      where('city_id == ?', city_id)
     else
       all
     end
