@@ -1,5 +1,5 @@
 class Book < ActiveRecord::Base
-  attr_accessible :date, :title, :city_id, :author_id
+  attr_accessible :date, :title, :city_id, :author_id, :tags
   belongs_to :author
   belongs_to :city
 
