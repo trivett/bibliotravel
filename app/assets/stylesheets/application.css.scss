@@ -14,61 +14,91 @@
 
 
 
-@import url(http://fonts.googleapis.com/css?family=Roboto+Slab);
+@import url(http://fonts.googleapis.com/css?family=Noto+Serif);
+@import url(http://fonts.googleapis.com/css?family=Domine);
+@import url(http://fonts.googleapis.com/css?family=Roboto);
 
-/* HEADER */
+$creme: #F2F1ED;
+$beige: #F4E5A6;
+$sans: Roboto, Helvetica, sans serif;
+$serif: Domine, Garamond, serif;
 
-#user_nav {
-  float: right;
-  padding: 0.5em 1em 0 0;
+
+body {
+  background-color: blue;
 }
 
-#logo{
-  float: right;
+
+
+header {
+  z-index: 1;
+  margin-bottom: 40px;
 }
 
-/* MAIN */
-
-
-#landing{
-
-  vertical-align: top;
-  float:right;
+.masthead {
+  padding-top:45px;
+  font: {
+    family: $sans;
+    size: 18px;
+  }
 }
 
-h1,h2,h3,h4,a.brand,p {
-  font-family: 'Roboto Slab', serif;
+h1,h2,h3,h4 {
+  font-family: $sans;
+}
+
+p {
+  font: {
+    family: $serif;
+    size: 14px;
+  }
+}
+
+.hero-unit {
+  padding: 40px;
+  margin {
+    top: 60px;
+    bottom: 40px;
+  }
+  width: 85%;
+
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 30px;
+  color: inherit;
+  background-color: #eeeeee;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+}
+
+
+
+.frontsections {
+  padding: 100px;
+  margin:15px;
+  margin-top: 50px;
+}
+
+
+.container-fluid {
+
+  margin: 0 auto;
+
+  padding:40px;
+
 
 }
 
-a.brand {
-  font-size : 1.6em;
+#jacket img {
+
 }
 
-p,th,td {
-  font-size: 1.4em;
-}
-
-td, th {
-  padding: 1em !important;
-}
-
-p.intro {
-  padding-bottom: 1.2em;
-}
-
-section {
-  margin: 2em 0 2em 0 !important;
-}
-/* FOOTER */
+/*
+box-shadow: 3px 5px 5px 5px #999;
+*/
 
 
-
-/* FORMS */
-
-
-
-/* MISC */
 
 
 
