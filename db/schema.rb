@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130519101513) do
+ActiveRecord::Schema.define(:version => 20130527222029) do
 
   create_table "authors", :force => true do |t|
     t.string   "name"
@@ -26,10 +26,11 @@ ActiveRecord::Schema.define(:version => 20130519101513) do
   create_table "books", :force => true do |t|
     t.string   "title"
     t.datetime "date"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
     t.integer  "city_id"
     t.integer  "author_id"
+    t.string   "tags",       :limit => 20,                 :array => true
   end
 
   create_table "cities", :force => true do |t|
