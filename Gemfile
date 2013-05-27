@@ -39,8 +39,9 @@ gem 'koala'
 gem 'figaro'
 gem 'geocoder'
 gem 'simple_form'
-gem 'kaminari'
 
+# search
+gem 'ransack'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
