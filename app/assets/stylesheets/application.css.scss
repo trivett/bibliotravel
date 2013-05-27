@@ -15,7 +15,6 @@
 
 
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
 /* HEADER */
 
@@ -30,9 +29,6 @@
 
 /* MAIN */
 
-html, body {
-  background: url('cream_pixels.png') repeat 0 0;
-}
 
 #landing{
 
@@ -41,7 +37,7 @@ html, body {
 }
 
 h1,h2,h3,h4,a.brand,p {
-  font-family: 'Open Sans', serif;
+  font-family: 'Roboto Slab', serif;
 
 }
 
