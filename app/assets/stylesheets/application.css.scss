@@ -23,10 +23,11 @@ $beige: #F4E5A6;
 $sans: Roboto, Helvetica, sans serif;
 $serif: Domine, Garamond, serif;
 
-
-body {
-  background-color: blue;
+body{
+  background-color: $beige;
 }
+
+
 
 
 
@@ -94,9 +95,7 @@ p {
 
 }
 
-/*
-box-shadow: 3px 5px 5px 5px #999;
-*/
+
 
 
 

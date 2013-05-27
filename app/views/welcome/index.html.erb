@@ -3,7 +3,7 @@
         <div class="hero-unit">
             <h1>Discover the right book for your trip.</h1>
             <p class="lead">A good novel heightens the experience of a new city. BookCities can help you find the best read based on your destination. Just pick a place and go!</p>
-            <div class="row4 offset3">
+            <div class="row3">
                 <%= form_tag books_index_path, :method => 'get' do %>
                     <div class="field">
                         <%= text_field_tag :search, params[:search], :placeholder => 'Take me to' %>
@@ -18,17 +18,17 @@
         </div>
         <div class="row-fluid marketing">
           <div class="span6" class="frontsections">
-             <h4><a href="#">Suggetions for <strong>New York</strong></a></h4>
-             <p>You can find novels set in your current city <a href="#">here.</a></p>
+             <h4><button class="btn btn-block btn-info">Suggetions for <strong><%= @city.name %></strong></button></h4>
+             <p>Find novels set in your current city here.</p>
         </div>
             <div class="span6" class="frontsections">
-                <h4><a href="#">Personalized Book Discovery</a></h4>
+                <h4><button class="btn btn-block btn-info">Personalized Recommendations</button></h4>
                 <p>Sign in with Facebook to get book suggestions based on what your friends like.</p>
             </div>
         </div>
         <div class="row-fluid marketing" class="frontsections">
             <div class="span6">
-             <h4>Share</h4>
+             <h4><button class="btn btn-info">Suggetions for <strong><%= @city.name %></strong><button></h4>
              <p>Tell us which books you would love to read in which city.</p>
         </div>
             <div class="span6" class="frontsections">

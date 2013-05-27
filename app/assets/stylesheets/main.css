@@ -42,5 +42,25 @@ p {
 
 .container-fluid {
   margin: 0 auto;
-  box-shadow: 3px 5px 5px 5px #999;
+
   padding: 40px; }
+button {
+  font-family: Roboto, Helvetica, sans serif;
+}
+
+@media (max-width: 650px) {
+  .hero-unit h1{
+  font-size: 20px;
+  }
+  .lead {
+    font-size: 14px;
+  }
+  .hero-unit {
+    padding:30px;
+  }
+}
+
+
+
+
+

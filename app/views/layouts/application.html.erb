@@ -23,10 +23,10 @@
 <div class="container-fluid">
       <header class="row-fluid">
           <div class="span4">
-            <%= image_tag 'logo-wide.png' %>
+            <%= link_to (image_tag "logo-wide.png"),  root_path, :id => "logo", :alt => "BookCities" %>
           </div>
           <div class="span4 offset3">
-              <div class="masthead">
+              <div class="masthead" >
                   <ul class="nav nav-pills pull-right">
                     <li><a href="discover.html">Discover Books</a></li>
                     <li><a href="about.html">About</a></li>
