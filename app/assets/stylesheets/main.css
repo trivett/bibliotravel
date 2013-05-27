@@ -1,0 +1,46 @@
+@import url(http://fonts.googleapis.com/css?family=Noto+Serif);
+@import url(http://fonts.googleapis.com/css?family=Domine);
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+body {
+  background-color: #f2f1ed; }
+
+header {
+  z-index: 1;
+  margin-bottom: 40px; }
+
+.masthead {
+  padding-top: 45px;
+  font-family: Roboto, Helvetica, sans serif;
+  font-size: 18px; }
+
+h1, h2, h3, h4 {
+  font-family: Roboto, Helvetica, sans serif; }
+
+p {
+  font-family: Domine, Garamond, serif;
+  font-size: 14px; }
+
+.hero-unit {
+  padding: 40px;
+  width: 85%;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 30px;
+  color: inherit;
+  background-color: #eeeeee;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px; }
+  .hero-unit margin {
+    top: 60px;
+    bottom: 40px; }
+
+.frontsections {
+  padding: 100px;
+  margin: 15px;
+  margin-top: 50px; }
+
+.container-fluid {
+  margin: 0 auto;
+  box-shadow: 3px 5px 5px 5px #999;
+  padding: 40px; }
