@@ -4,9 +4,9 @@ class Book < ActiveRecord::Base
   belongs_to :city
 
   def self.search(search)
+    city_id = City.where(:name => search).id
     if search
-      puts self.city.name
-      find(:all, :conditions => ['self.city.name  ?' "#{search}"])
+      find(:all, :conditions => ['self.city_id == ?', city_id])
     else
       find(:all)
     end
