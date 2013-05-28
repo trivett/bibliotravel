@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130527222029) do
+ActiveRecord::Schema.define(:version => 20130528131348) do
 
   create_table "authors", :force => true do |t|
     t.string   "name"
@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(:version => 20130527222029) do
     t.integer  "city_id"
     t.integer  "author_id"
     t.string   "tags",       :limit => 20,                 :array => true
+    t.integer  "isbn"
+    t.string   "blurb"
   end
 
   create_table "cities", :force => true do |t|

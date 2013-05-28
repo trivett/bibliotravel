@@ -1,7 +1,6 @@
 require 'rubygems'
 require 'open-uri'
 
-puts 'Scraping guardian site'
 
 url1 = "http://www.guardian.co.uk/travel/2011/may/20/top-10-books-on-london"
 
