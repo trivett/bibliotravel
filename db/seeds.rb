@@ -5,7 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
+require 'csv'
 
 City.delete_all
 Book.delete_all
@@ -23,7 +23,7 @@ file1 = Rails.root + "nybooks.csv"
 file2 = Rails.root + "sfbooks.csv"
 file3 = Rails.root + "londonbooks.csv"
 
-CSV.foreach(file3, :headers => true) do |row|
+CSV.foreach(file3) do |row|
   a = Author.create!({ :name => row[0]}, :city_id => c3.id )
   Book.create!({
     :title => row[1],
