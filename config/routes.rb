@@ -1,6 +1,6 @@
 Bibliotravel::Application.routes.draw do
 
-  get "books/index"
+ match 'discover' => "books#index", :via => :get
 
   get "books/show"
 
