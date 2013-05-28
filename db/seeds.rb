@@ -31,21 +31,19 @@ CSV.foreach(file3) do |row|
     :city_id => c3.id,
     :isbn => row[2],
     :blurb => row[3],
-    :tags => row[4]
   })
 end
 
-CSV.foreach(file1) do |row|
-  a = Author.create!({ :name => row[0]}, :city_id => c1.id )
-  Book.create!({
-    :title => row[1],
-    :author_id => a.id,
-    :city_id => c1.id,
-    :isbn => row[2],
-    :blurb => row[3],
-    :tags => row[4]
-  })
-end
+# CSV.foreach(file1) do |row|
+#   a = Author.create!({ :name => row[0]}, :city_id => c1.id )
+#   Book.create!({
+#     :title => row[1],
+#     :author_id => a.id,
+#     :city_id => c1.id,
+#     :isbn => row[2],
+#     :blurb => row[3],
+#   })
+# end
 # CSV.foreach(file2, :headers => true) do |row|
 #   a = Author.create!({ :name => row[1]} ) 
 #   Book.create!({
