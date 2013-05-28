@@ -1,5 +1,22 @@
 <h1>Here are your books for <strong><%= @city %></strong>!</h1>
-<%= @books.each do |b| %>
-  <%= b.title %>
-  <%= b.author.name %>
-<% end %>
+<table class="table-striped">
+  <thead>
+    <tr>
+      <td>Title</td>
+      <td>Author</td>
+      <td>Summary</td>
+      <td>Purchase</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @books.each do |b| %>
+    <tr>
+      <td><%= b.title %></td>
+      <td><%= image_tag "http://covers.librarything.com/devkey/#{ENV[LIB_THING_KEY]}/medium/#{b.isbn}" %></td>
+      <td><%= b.author.name %></td>
+      <td><%= b.blurb %></td>
+      <td><%= link_to 'Buy from Powells', '#', class: 'button' %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
