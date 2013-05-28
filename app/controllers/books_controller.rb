@@ -5,9 +5,6 @@ class BooksController < ApplicationController
   end
 
   def show
-    # @books = Book.city.search(params[:search])
-  end
-
-  def search
+    @book = Book.find(params[:id])
   end
 end
