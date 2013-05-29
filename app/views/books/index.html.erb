@@ -1,5 +1,6 @@
 <h1>Here are your books for <strong><%= @city.titleize %></strong>!</h1>
 <ul>
+  <li class="btn filter" data-filter='all'>View All</li>
   <li class="btn filter" data-filter='classic'>Classics</li>
   <li class="btn filter" data-filter='drama'>Drama</li>
   <li class="btn filter" data-filter='Bildungsroman'>Bildungsroman</li>
@@ -8,10 +9,10 @@
 <ul id="Grid">
   <% @books.each do |b| %>
     <li class="mix <%= b.tags.join(' ') %>">
+      <%= image_tag "http://covers.librarything.com/devkey/#{ENV["LIB_THING_KEY"]}/large/isbn/#{b.isbn}" %>
       <%= link_to b.title, books_show_path(b) %>
       <%= b.author.name %>
       <%= b.blurb %>
-      <%= image_tag "http://covers.librarything.com/devkey/#{ENV["LIB_THING_KEY"]}/large/isbn/#{b.isbn}" %>
     </li>
   <% end %>
 </ul>

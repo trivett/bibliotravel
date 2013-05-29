@@ -13,8 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
-//= require mixitup-1.5.3/src/jquery.mixitup
 //= require_tree .
+//= require mixitup-1.5.3/src/jquery.mixitup
 
 
 

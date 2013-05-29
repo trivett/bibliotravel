@@ -111,3 +111,10 @@ input#search {
   margin: 0 0.6em 0 0;
 }
 
+/* mixitup jscript styles */
+
+#Grid .mix{
+    opacity: 0;
+    display: none;
+}
+
