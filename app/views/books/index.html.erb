@@ -12,7 +12,7 @@
     <% @books.each do |b| %>
       <tr>
         <td><%= image_tag "http://covers.librarything.com/devkey/#{ENV["LIB_THING_KEY"]}/large/isbn/#{b.isbn}" %></td>
-        <td><%= b.title %></td>
+        <td><strong><%= link_to b.title, books_show_path(b) %></strong></td>
         <td><%= b.author.name %></td>
         <td><%= b.blurb %></td>
         <td><%= link_to 'Buy from Powells', '#', class: 'btn btn-custom-lighten' %></td>

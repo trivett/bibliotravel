@@ -1,14 +1,8 @@
-<%= form_tag books_show_path, :method => :get do %>
-<p>
-  <%= text_field_tag :search, params[:search]  %>
-  <%= submit_tag 'Search', :name => nil %>
-</p>
-<% end %>
-
-<% if @books %>
-  <% @books.each do |b| %>
-    <%= b.title %>
-  <% end %>
-<% else %>
-  No books on that city, sorry!
-<% end %>
+<h2>Details for <strong><%= @book.title %></strong></h2>:
+<table>
+  <tr>
+    <%= @book.author %>
+    <%= @book.blurb %>
+    <%= @book.tags %>
+  </tr>
+</table>
