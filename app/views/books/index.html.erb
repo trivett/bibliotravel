@@ -1,22 +1,17 @@
 <h1>Here are your books for <strong><%= @city.titleize %></strong>!</h1>
-<table class="table-striped">
-  <thead>
-    <tr>
-      <td>Title</td>
-      <td>Author</td>
-      <td>Summary</td>
-      <td>Purchase</td>
-    </tr>
-  </thead>
-  <tbody>
-    <% @books.each do |b| %>
-      <tr>
-        <td><%= image_tag "http://covers.librarything.com/devkey/#{ENV["LIB_THING_KEY"]}/large/isbn/#{b.isbn}" %></td>
-        <td><strong><%= link_to b.title, books_show_path(b) %></strong></td>
-        <td><%= b.author.name %></td>
-        <td><%= b.blurb %></td>
-        <td><%= link_to 'Buy from Powells', '#', class: 'btn btn-custom-lighten' %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<ul>
+  <li class="btn filter" data-filter='classic'>Classics</li>
+  <li class="btn filter" data-filter='drama'>Drama</li>
+  <li class="btn filter" data-filter='Bildungsroman'>Bildungsroman</li>
+</ul>
+
+<ul id="Grid">
+  <% @books.each do |b| %>
+    <li class="mix <%= b.tags.join(' ') %>">
+      <%= link_to b.title, books_show_path(b) %>
+      <%= b.author.name %>
+      <%= b.blurb %>
+      <%= image_tag "http://covers.librarything.com/devkey/#{ENV["LIB_THING_KEY"]}/large/isbn/#{b.isbn}" %>
+    </li>
+  <% end %>
+</ul>

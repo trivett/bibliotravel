@@ -13,7 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
-//= require_tree ../../vendor/assets/javascripts/.
+//= require mixitup-1.5.3/src/jquery.mixitup
 //= require_tree .
 
 
@@ -21,3 +21,4 @@
 $(function() {
     $( "#accordion" ).accordion({ collapsible: true, heightStyle: "content" });
   });
+
