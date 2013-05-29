@@ -20,7 +20,6 @@ c5 = City.create(name: 'Tokyo', country: 'Japan')
 Author.create(name: 'Herman Melville', city_id: c1.id, blurb: 'American novelist, short story writer, essayist, and pffoet. He is best known for his novel Moby-Dick. His first three books gained much contemporary attention (the first, Typee, became a bestseller), but after a fast-blooming literary success in the late 1840s, his popularity declined precipitously in the mid-1850s and never recovered during his lifetime.')
 
 file1 = Rails.root + "nybooks.csv"
-file2 = Rails.root + "sfbooks.csv"
 file3 = Rails.root + "londonbooks.csv"
 
 CSV.foreach(file3) do |row|
@@ -31,6 +30,7 @@ CSV.foreach(file3) do |row|
     :city_id => c3.id,
     :isbn => row[2],
     :blurb => row[3],
+    :tags => row[4]
   })
 end
 
@@ -42,6 +42,7 @@ end
 #     :city_id => c1.id,
 #     :isbn => row[2],
 #     :blurb => row[3],
+#     :tags => row[4]
 #   })
 # end
 # CSV.foreach(file2, :headers => true) do |row|
