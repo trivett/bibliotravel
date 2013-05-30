@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130528152620) do
+ActiveRecord::Schema.define(:version => 20130530014137) do
 
   create_table "authors", :force => true do |t|
     t.string   "name"
@@ -43,6 +43,16 @@ ActiveRecord::Schema.define(:version => 20130528152620) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "rankings", :force => true do |t|
+    t.string   "source"
+    t.integer  "ranking"
+    t.integer  "book_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "rankings", ["book_id"], :name => "index_rankings_on_book_id"
 
   create_table "users", :force => true do |t|
     t.string   "provider"

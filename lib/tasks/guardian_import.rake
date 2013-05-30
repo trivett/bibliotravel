@@ -3,7 +3,6 @@ task :guardian_import => [:environment] do
 
   require 'open-uri'
   require 'nokogiri'
-  require 'sequel'
 
   guardian_top_100 = "http://www.guardian.co.uk/books/2003/oct/12/features.fiction"
 
