@@ -1,0 +1,59 @@
+author1:
+  name:
+    'Betty Smith'
+  book1:
+    author:
+      author1
+    title:
+      'A Tree Grows in Brooklyn'
+    isbn:
+      9780061120077
+    blurb:
+      'The beloved American classic about a young girls coming-of-age at the turn of the century, Betty Smiths A Tree Grows in Brooklyn is a poignant and moving tale filled with compassion and cruelty, laughter and heartache, crowded with life and people and incident. The story of young, sensitive, and idealistic Francie Nolan and her bittersweet formative years in the slums of Williamsburg has enchanted and inspired millions of readers for more than sixty years.'
+    tags:
+      - Bildungsroman
+      - chick lit
+
+author2:
+  name:
+    'Suze Rotolo'
+  book2:
+    author:
+      author2
+    title: 
+      'A Freewheelin Time'
+    isbn:
+      9780767926881
+    blurb:
+      'Suze Rotolos memoir of her early 1960s life with Bob Dylan and the extraordinary period of artistic and political ferment in Greenwich Village.'
+    tags:
+      ['political', 'memoir']
+
+author3:
+  name:
+    Henry James
+  book3:
+    author:
+      author3
+    title:
+      Washington Square
+    isbn:
+      9780140432268
+    blurb:
+      'Set in New York, this closely constructed novel belongs to James early period. Like Portrait of a Lady it studies the plight of an innocent heiress who is deceived by the looks and charm of a worthless suitor. At the same time she is striving to be loyal to a cold and forbidding father.'
+    tags:
+      ['classic', 'historic']
+
+author4:
+  name:
+    'Toni Morrison'
+  book4:
+    name:
+    'Jazz'
+    isbn:
+      9781400076215
+    blurb:
+      'Harlem in the 1920s, the capital of Black America and jazz itself, is the setting for Toni Morrisons dazzling novel.'
+    tags:
+      ['jazz', 'african-american']
+

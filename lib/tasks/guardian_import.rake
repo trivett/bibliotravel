@@ -12,7 +12,7 @@ task :guardian_import => [:environment] do
   entries = guard_page.css('div#article-body-blocks p')
 
 
-
+  
   entries.each do |e|
     content = e.to_html
     bits = content.split('<br>')
@@ -21,7 +21,7 @@ task :guardian_import => [:environment] do
       title = bits[0].match(/\s([\w\s?]+?)<\//)[1]
       author = bits[0].match(/\/strong>\s+([\w\.?\s?]+)/)[1]
       a = Author.find_or_create_by_name(name: author)
-      b = Book.create(title: title)
+      b = Book.create(title: title, author_id: a.id)
       Ranking.create(source: 'guardian', ranking: rank, book_id: b.id)
     rescue
       next
