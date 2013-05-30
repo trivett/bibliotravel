@@ -127,6 +127,14 @@ input#search {
   margin: 0 0.6em 0 0;
 }
 
+.contact a {
+  padding: 0 0.5em;
+}
+
+.masthead li {
+  padding-right: 0.5em;
+}
+
 /* mixitup jscript styles */
 
 #Grid .mix{

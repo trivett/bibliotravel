@@ -32,11 +32,14 @@
 <%= yield %>
           <footer>
               <div class="masthead" >
-                  <ul class="nav nav-pills pull-right">
+                  <ul class="nav nav-pills pull-left">
                   <div class="contact">
                       <%= link_to 'About', welcome_about_path %>
                       <%= mail_to 'contact@bookcity.com', 'Contact Us', :encode => 'hex' %>
                   </div>
+                  </ul>
+                  <ul class="nav nav-pills pull-right">
+                    <li>&copy; 2013 Bookcity</li>
                   </ul>
               </div>
           </footer>
