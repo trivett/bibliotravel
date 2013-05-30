@@ -19,8 +19,7 @@
 <ul id="Grid">
   <% unless @books.nil? %>
     <% @books.each do |b| %>
-      <div class="book">
-        <li class="mix <%= b.tags.join(' ') unless b.tags.nil? %>">
+      <div class="book mix <%= b.tags.join(' ') unless b.tags.nil? %>">
           <%= book_cover_helper(b) %>
           <div class="blurb">
             <p><%= link_to b.title, b %></p>
@@ -28,7 +27,6 @@
             <p><%= b.blurb %></p>
             <%= link_to 'Buy text!', '#', class:  'buy btn'%>
           </div>
-        </li>
       </div>
     <% end %>
   <% end %>
