@@ -4,11 +4,15 @@ class Book < ActiveRecord::Base
   belongs_to :city
 
   def self.search(search)
-    if search
-      city_id = City.where(:name => search.titleize).first.id
-      where('city_id = ?', city_id)
-    else
-      all
+    begin
+      if search
+        city_id = City.where(:name => search.titleize).first.id
+        where('city_id = ?', city_id)
+      else
+        all
+      end
+    rescue
+      nil
     end
   end
 

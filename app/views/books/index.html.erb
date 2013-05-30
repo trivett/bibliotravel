@@ -1,27 +1,37 @@
-<h1>Here are your books for <strong><%= @city.titleize %></strong>!</h1>
+<% unless @books.nil? %>
+  <h1>Here are your books for <strong><%= @city.titleize %></strong>!</h1>
+<% else %>
+  <h1>We could not find any titles for <%= @city.titleize %>.</h1>
+<% end %>
 <ul>
   <li class="btn filter" data-filter='all'>View All</li>
-  <% @books.each do |b| %>
-    <% unless b.tags.nil? %>
-      <% b.tags.each do |t| %>
-        <li class="btn filter" data-filter="<%= t %>"><%= t.titleize %></li> 
+  <% unless @books.nil? %>
+    <% @books.each do |b| %>
+      <% unless b.tags.nil? %>
+        <% b.tags.each do |t| %>
+          <li class="btn filter" data-filter="<%= t %>"><%= t.titleize %></li> 
+        <% end %>
       <% end %>
     <% end %>
   <% end %>
 </ul>
 
 <ul id="Grid">
-  <% @books.each do |b| %>
-    <div class="book">
-      <li class="mix <%= b.tags.join(' ') unless b.tags.nil? %>">
-        <%= book_cover_helper(b) %>
-        <div class="blurb">
-          <p><%= link_to b.title, b %></p>
-          <p><%= b.author.name %></p>
-          <p><%= b.blurb %></p>
-        </div>
-      </li>
-    </div>
+  <% unless @books.nil? %>
+    <% @books.each do |b| %>
+      <div class="book">
+        <li class="mix <%= b.tags.join(' ') unless b.tags.nil? %>">
+          <%= book_cover_helper(b) %>
+          <div class="blurb">
+            <p><%= link_to b.title, b %></p>
+            <p><%= b.author.name %></p>
+            <p><%= b.blurb %></p>
+            <%= link_to 'Buy text!', '#', class:  'buy btn'%>
+          </div>
+        </li>
+      </div>
+    <% end %>
   <% end %>
 </ul>
+
 
