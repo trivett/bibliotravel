@@ -12,11 +12,15 @@
 
 <ul id="Grid">
   <% @books.each do |b| %>
-    <li class="mix <%= b.tags.join(' ') unless b.tags.nil? %>">
-      <%= image_tag "http://covers.librarything.com/devkey/#{ENV["LIB_THING_KEY"]}/large/isbn/#{b.isbn}" %>
-      <%= link_to b.title, books_show_path(b) %>
-      <%= b.author.name %>
-      <%= b.blurb %>
-    </li>
+    <div class="book">
+      <li class="mix <%= b.tags.join(' ') unless b.tags.nil? %>">
+        <%= book_cover_helper(b) %>
+        <div class="blurb">
+          <p><%= link_to b.title, b %></p>
+          <p><%= b.author.name %></p>
+          <p><%= b.blurb %></p>
+        </div>
+      </li>
+    </div>
   <% end %>
 </ul>

@@ -135,6 +135,26 @@ input#search {
   padding-right: 0.5em;
 }
 
+
+/* book search display */
+
+.book {
+  margin: 3em 0;
+}
+
+.book p {
+  font-size: 1.2em !important;
+  /*line-height: 1.4em !important;*/
+}
+
+.book img {
+  float: left;
+}
+
+.blurb {
+  margin-left: 15%;
+}
+
 /* mixitup jscript styles */
 
 #Grid .mix{
