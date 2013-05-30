@@ -6,3 +6,6 @@ $ ->
   $('#Grid').mixitup()
 
   
+
+$('#show-excerpt').click ->
+  $('#excerpt').show 'fold', 1000
