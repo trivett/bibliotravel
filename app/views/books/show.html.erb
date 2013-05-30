@@ -1,7 +1,9 @@
 <h2>Details for <strong><%= @book.title %></strong></h2>:
 <table>
   <tr>
-    <p>Tagged under: <%= @book.tags.join(', ') %></p>
+    <% if @book.tags %>
+      <p>Tagged under: <%= @book.tags.join(', ') %></p>
+    <% end %>
 
   </tr>
 </table>
