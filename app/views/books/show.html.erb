@@ -4,14 +4,17 @@
     <%= @book.author %>
     <%= @book.blurb %>
     <%= @book.tags %>
-    <%= link_to 'Read an excerpt', '#', class: 'excerpt btn filter' , data: { :show => true, :toggle => 'modal', :target => "##{b.isbn}Modal"}%>
+    <div class="exerpt">
+      <%= link_to 'Read an excerpt', '#', class: 'excerpt btn filter' , data: { :show => true, :toggle => 'modal', :target => "##{@book.isbn}Modal"}%>
+      <%= link_to 'Buy text!', '#', class:  'buy btn'%>
+    </div>
   </tr>
 </table>
 <h3><%= @book.title %> has been recommended by these local writers and authorities:</h3>
 
 <!-- mock out the display here - sort of like Discourse app maybe... -->
 <!-- MODAL experiment -->
-<div id="9780679420422Modal" class="modal hide fade" >
+<div id="<%= @book.isbn %>Modal" class="modal hide fade" >
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
     <h3 id="myModalLabel">Your excerpt, fine sir:</h3>

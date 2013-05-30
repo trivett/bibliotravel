@@ -144,7 +144,11 @@ input#search {
 
 
 
-/* book search display */
+/* books#show */
+
+
+
+/* books#index */
 
 .book {
   margin: 3em 0;
@@ -160,10 +164,16 @@ input#search {
 }
 
 .blurb {
+  margin-top: 2em;
   margin-left: 15%;
+
 }
 
-/* mixitup jscript styles */
+.blurb p a {
+  /*color: #3a2f3b !important;*/
+  font-size: 1.2em;
+}
+*//* mixitup jscript styles 
 
 #Grid .mix{
     opacity: 0;
