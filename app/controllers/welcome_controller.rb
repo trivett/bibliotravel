@@ -2,7 +2,7 @@ class WelcomeController < ApplicationController
   def index
     city = request.location.city
     unless city.nil?
-      @city = City.find(:name => city)
+      @city = City.where(:name => city).first.name
     else
       @city = City.first
     end
