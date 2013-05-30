@@ -21,12 +21,15 @@ p {
   font-size: 14px; }
 
 .hero-unit {
+
   padding: 40px;
-  width: 85%;
+  width: 89%;
   font-size: 18px;
   font-weight: 200;
   line-height: 30px;
-  color: inherit;
+  background-image: url('/assets/komme.jpg');
+  background-size:100%;
+  background-repeat:no-repeat;
   background-color: #eeeeee;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -34,6 +37,11 @@ p {
   .hero-unit margin {
     top: 60px;
     bottom: 40px; }
+
+.hero-unit {
+  color:#FFFFFF;
+  text-shadow: 2px 2px #000;
+}
 
 .frontsections {
   padding: 100px;
@@ -86,13 +94,21 @@ button {
   background-color: #2f2630 ;
 }
 
+/*mobile sizing */
 
 @media (max-width: 650px) {
   .hero-unit h1{
   font-size: 20px;
   }
+  .hero-unit {
+    line-height: 10px;
+    color: WHITE;
+    text-shadow: 2px 2px #0000;
+  }
   .lead {
     font-size: 14px;
+    color: #FFFFFF;
+    text-shadow: 2px 2px #0000;
   }
   .hero-unit {
     padding: 20px;
