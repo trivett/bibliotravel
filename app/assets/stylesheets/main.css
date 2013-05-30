@@ -18,7 +18,7 @@ h1, h2, h3, h4 {
 
 p {
   font-family: Domine, Garamond, serif;
-  font-size: 14px; }
+  font-size: 16px; }
 
 .hero-unit {
 
@@ -54,6 +54,7 @@ p {
   padding: 40px; }
 button {
   font-family: Roboto, Helvetica, sans serif;
+  font-size: 1.1em !important;
   background-image: none;
   background-color: #2F2630 !important ;
 }
