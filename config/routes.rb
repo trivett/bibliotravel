@@ -1,6 +1,6 @@
 Bibliotravel::Application.routes.draw do
 
- match 'discover' => "books#index", :via => :get
+  match 'discover' => "books#index", :via => :get
 
   get "books/show"
 
@@ -8,6 +8,7 @@ Bibliotravel::Application.routes.draw do
 
   get "sessions/create"
 
+  get 'welcome/about'
 
   root :to => 'welcome#index'
 
