@@ -2,10 +2,24 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
+
+# mixitup call on books#index page
+
 $ -> 
   $('#Grid').mixitup()
 
   
+# tabs on show page
 
-$('#show-excerpt').click ->
-  $('#excerpt').show 'fold', 1000
+$('#excerpt a').click (e) ->
+  e.preventDefault()
+  $(this).tab "show"
+
+
+$("#bio a").click (e) ->
+  e.preventDefault()
+  $(this).tab "show"
+
+$("#context a").click (e) ->
+  e.preventDefault()
+  $(this).tab "show"
