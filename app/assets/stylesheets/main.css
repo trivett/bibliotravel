@@ -23,11 +23,11 @@ p {
 .hero-unit {
 
   padding: 40px;
-  width: 85%;
+  width: 89%;
   font-size: 18px;
   font-weight: 200;
   line-height: 30px;
-  background-image: url('/assets/koenji.jpg');
+  background-image: url('/assets/komme.jpg');
   background-size:100%;
   background-repeat:no-repeat;
   background-color: #eeeeee;
@@ -40,7 +40,7 @@ p {
 
 .hero-unit {
   color:#FFFFFF;
-  text-shadow: 1px 1px #000;
+  text-shadow: 2px 2px #000;
 }
 
 .frontsections {
