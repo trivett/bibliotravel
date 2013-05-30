@@ -39,7 +39,7 @@ p {
     bottom: 40px; }
 
 .hero-unit {
-  color:#FFFFFF;
+  color:#FFFFFF !important;
   text-shadow: 2px 2px #000;
 }
 
