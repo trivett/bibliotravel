@@ -1,13 +1,11 @@
 class WelcomeController < ApplicationController
   def index
     city = request.location.city
-    unless city.nil?
-      @city = City.where(:name => city).first.name
-    else
+    begin
+      @city = City.where(:name => city.titleize).first.name
+    rescue
       @city = City.first
     end
-    # @books = Book.where(:city_id => @city.id).limit(15)
-    # @authors = @city.authors.limit(5)
   end
 
 end
