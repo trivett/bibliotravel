@@ -23,12 +23,10 @@ task :guardian_import => [:environment] do
       author = bits[0].match(/\/strong>\s+([\w\.?\s?]+)/)[1]
       a = Author.find_or_create_by_name(name: author)
       b = Book.create(title: title)
-      Ranking.create(source: 'Guardian', ranking: rank)
+      Ranking.create(source: 'guardian', ranking: rank, book_id: b.id)
     rescue
       next
     end
   end
-
-  print ranks.all
-
+end
 
