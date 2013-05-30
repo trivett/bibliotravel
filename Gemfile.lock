@@ -82,6 +82,7 @@ GEM
     mime-types (1.23)
     multi_json (1.7.3)
     multipart-post (1.2.0)
+    nokogiri (1.5.9)
     oauth2 (0.8.1)
       faraday (~> 0.8)
       httpauth (~> 0.1)
@@ -181,6 +182,7 @@ DEPENDENCIES
   jquery-rails
   koala
   less-rails
+  nokogiri
   omniauth-facebook (= 1.4.0)
   pg
   postgres_ext

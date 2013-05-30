@@ -43,7 +43,6 @@ gem 'simple_form'
 
 # data import
 gem 'nokogiri'
-gem 'open-uri'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
