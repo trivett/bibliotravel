@@ -130,6 +130,12 @@ input#search {
 
 .contact a {
   padding: 0 0.5em;
+  color: #333;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  color: #525252;
 }
 
 .masthead li {
