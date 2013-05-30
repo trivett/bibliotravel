@@ -21,13 +21,12 @@ p {
   font-size: 14px; }
 
 .hero-unit {
-  color:#FFFFFF;
+
   padding: 40px;
   width: 85%;
   font-size: 18px;
   font-weight: 200;
   line-height: 30px;
-  color: inherit;
   background-image: url('/assets/koenji.jpg');
   background-size:100%;
   background-repeat:no-repeat;
@@ -38,6 +37,11 @@ p {
   .hero-unit margin {
     top: 60px;
     bottom: 40px; }
+
+.hero-unit {
+  color:#FFFFFF;
+  text-shadow: 1px 1px #000;
+}
 
 .frontsections {
   padding: 100px;
