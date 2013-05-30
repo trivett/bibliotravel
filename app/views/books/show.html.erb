@@ -1,21 +1,37 @@
 <h2>Details for <strong><%= @book.title %></strong></h2>:
 <table>
   <tr>
-    <p><%= @book.author.name %><p>
-    <p><%= @book.blurb %><p>
     <p>Tagged under: <%= @book.tags.join(', ') %></p>
 
-    <div class="exerpt">
-      <%= link_to 'Read an excerpt', '#', class: 'btn', :id => 'show-excerpt' %>
-      <%= link_to 'Buy text!', '#', class:  'buy btn'%>
-    </div>
   </tr>
 </table>
-<h4><%= @book.title %> has been recommended by these local writers and authorities:</h4>
+
+<section class="recommendations">
+  <h4><%= @book.title %> has been recommended by these local writers and authorities:</h4>
+
+  <div class="media">
+    <a class="pull-left" href="#">
+      <%= image_tag "amis.jpg", size: '128x128', class: 'media-object' %>
+    </a>
+    <div class="media-body">
+      <h4 class="media-heading">Martin Amis</h4>
+      <p>This novel proves that Love is an abstract noun, something nebulous. And yet love turns out to be the only part of us that is solid, as the world turns upside down and the screen goes black. And meanwhile time goes about its immemorial work of making everyone look and feel like shit.</p>
+   
+      <!-- Nested media object -->
+<!--       <div class="media hack">
+        <a class="pull-left" href="#">
+        </a>
+        <div class="media-body">
+          <h4 class="media-heading">Julian Barnes</h4>
+          <p>Typical.</p>
+      </div>
+ -->    </div>
+  </div>
+</section> <!-- / recommendations -->
 
 <!-- TABS experiment -->
 <ul class="nav nav-tabs" id="myTab">
-  <li><a data-toggle="tab" href="#excerpt">Excerpt</a></li>
+  <li class="active"><a data-toggle="tab" href="#excerpt">Excerpt</a></li>
   <li><a data-toggle="tab" href="#bio">Author Bio</a></li>
   <li><a data-toggle="tab" href="#map">Book Map</a></li>
   <li><a data-toggle="tab" href="#quotes">Quotes</a></li>
@@ -48,3 +64,6 @@
   </div>
 </div>
 
+<div class="buy">
+  <%= link_to 'Buy text!', '#', class:  'buy btn btn-custom-lighten'%>
+</div>

@@ -146,7 +146,18 @@ input#search {
 
 /* books#show */
 
+.recommendations {
+  margin: 2em 0;
+}
 
+.buy {
+  margin-top: 1.5em;
+  font-size: 1.2em;
+}
+
+.hack {
+  margin-top: 6em !important;
+}
 
 /* books#index */
 
@@ -170,7 +181,6 @@ input#search {
 }
 
 .blurb p a {
-  /*color: #3a2f3b !important;*/
   font-size: 1.2em;
 }
 
