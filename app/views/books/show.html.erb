@@ -1,23 +1,25 @@
-<h2>Details for <strong><%= @book.title %></strong>:</h2>
-<table>
-  <tr>
-    <% if @book.tags %>
-      <p>Tagged under: <%= @book.tags.join(', ') %></p>
-    <% end %>
 
-  </tr>
-</table>
-
-<section class="recommendations">
-  <h4><%= @book.title %> has been recommended by these local writers and authorities:</h4>
+<section class="author">
+  <h2><%= @book.title %>, written by <%= @book.author.name %></h2>
 
   <div class="media">
     <a class="pull-left" href="#">
-      <%= image_tag "amis.jpg", size: '128x128', class: 'media-object' %>
+      <%= image_tag "woolf.jpg", size: '128x128', class: 'media-object' %>
     </a>
     <div class="media-body">
-      <h4 class="media-heading">Martin Amis</h4>
-      <p>This novel proves that Love is an abstract noun, something nebulous. And yet love turns out to be the only part of us that is solid, as the world turns upside down and the screen goes black. And meanwhile time goes about its immemorial work of making everyone look and feel like shit.</p>
+      <!-- <h4 class="media-heading">Martin Amis</h4> -->
+      <table>
+        <tr>
+          <% if @book.tags %>
+            <p>Tagged under: <%= @book.tags.join(', ') %></p>
+          <% end %>
+
+        </tr>
+      </table>
+      <p>Started in <%= link_to 'Surrey', '#'%> in 1922 and finished at <%= link_to 'her flat in London', '#' %> in 1924, Woolf's first great masterpiece features many modernist touches: extensive interior monologue, narratological leaps, and unreliable narrators.<p>
+    </div>
+  </div>
+</section>
    
       <!-- Nested media object -->
 <!--       <div class="media hack">
@@ -41,13 +43,13 @@
  
 <div class="tab-content">
   <div class="tab-pane active" id="excerpt">
-    <p>She would not say of any one in the world now that they were this or were that. She felt very young; at the same time unspeakably aged. She sliced like a knife through everything; at the same time was outside, looking on.She had a perpetual sense, as she watched the taxi cabs, of being out, out, far out to sea and alone; she always had the feeling that it was very, very dangerous to live even one day. Not that she thought herself clever, or much out of the ordinary. How she had got through life on the few twigs of knowledge Fräulein Daniels gave them she could not think. She knew nothing; no language, no history; she scarcely read a book now, except memoirs in bed; and yet to her it was absolutely absorbing; all this; the cabs passing; and she would not say of Peter, she would not say of herself, I am this, I am that.
+    <p>She would not say of any one in the world now that they were this or were that. She felt very young; at the same time unspeakably aged. She sliced like a knife through everything; at the same time was outside, looking on.She had a perpetual sense, as she watched the taxi cabs, of being out, out, far out to sea and alone; she always had the feeling that it was very, very dangerous to live even one day. Not that she thought herself clever, or much out of the ordinary. How she had got through life on the few twigs of knowledge Fräulein Daniels gave them she could not think. She knew nothing; no language, no history; she scarcely read a book now, except memoirs in bed; and yet to her it was absolutely absorbing; all this; the cabs passing; and she would not say of Peter, she would not say of herself, I am this, I am that.  <%= link_to 'Read on...', '#' %></p>
 
-    Her only gift was knowing people almost by instinct, she thought, walking on. If you put her in a room with some one, up went her back like a cat's; or she purred. Devonshire House, Bath House, the house with the china cockatoo, she had seen them all lit up once; and remembered Sylvia, Fred, Sally Seton — such hosts of people; and dancing all night; and the waggons plodding past to market; and driving home across the Park. She remembered once throwing a shilling into the Serpentine. But every one remembered; what she loved was this, here, now, in front of her; the fat lady in the cab. Did it matter then, she asked herself, walking towards Bond Street, did it matter that she must inevitably cease completely; all this must go on without her; did she resent it; or did it not become consoling to believe that death ended absolutely? but that somehow in the streets of London, on the ebb and flow of things, here, there, she survived, Peter survived, lived in each other, she being part, she was positive, of the trees at home; of the house there, ugly, rambling all to bits and pieces as it was; part of people she had never met; being laid out like a mist between the people she knew best, who lifted her on their branches as she had seen the trees lift the mist, but it spread ever so far, her life, herself. But what was she dreaming as she looked into Hatchards' shop window? What was she trying to recover? What image of white dawn in the country, as she read in the book spread open:
+<!--     Her only gift was knowing people almost by instinct, she thought, walking on. If you put her in a room with some one, up went her back like a cat's; or she purred. Devonshire House, Bath House, the house with the china cockatoo, she had seen them all lit up once; and remembered Sylvia, Fred, Sally Seton — such hosts of people; and dancing all night; and the waggons plodding past to market; and driving home across the Park. She remembered once throwing a shilling into the Serpentine. But every one remembered; what she loved was this, here, now, in front of her; the fat lady in the cab. Did it matter then, she asked herself, walking towards Bond Street, did it matter that she must inevitably cease completely; all this must go on without her; did she resent it; or did it not become consoling to believe that death ended absolutely? but that somehow in the streets of London, on the ebb and flow of things, here, there, she survived, Peter survived, lived in each other, she being part, she was positive, of the trees at home; of the house there, ugly, rambling all to bits and pieces as it was; part of people she had never met; being laid out like a mist between the people she knew best, who lifted her on their branches as she had seen the trees lift the mist, but it spread ever so far, her life, herself. But what was she dreaming as she looked into Hatchards' shop window? What was she trying to recover? What image of white dawn in the country, as she read in the book spread open:
 
     Fear no more the heat o' the sun
 
-    Nor the furious winter's rages.</p>
+    Nor the furious winter's rages.</p> -->
   </div>
   <div class="tab-pane" id="bio">
    <p>Born Virginia Stephens, January 25, 1882 in London, into a distinguished family of literary critics and scholars.  She never went to school, but her father chose books for her to read from his own library. Her brothers all went to the best universities, and she wrote letters to them about her reading.  Eventually she started to write her own literary criticism for the <em>Times Literary Supplement</em>, and in 1917 Woolf and her husband founded <em>Hogarth Press</em>.  She published whatever she wanted, and began to produce a series of her own experimental works.  In them she explored what she identified as the critical lack in 19th century literature:  novelists had focused entirely on the clothing people wore and the food they ate and the things they did. She believed that the most mysterious and essential aspects of human beings were not their possessions or their habits, but their interior emotions and thoughts.</p> 
@@ -66,6 +68,28 @@
   </div>
 </div>
 
+<section class="recommendations">
+  <h4><%= @book.title %> has been recommended by these local writers and authorities:</h4>
+
+  <div class="media">
+    <a class="pull-left" href="#">
+      <%= image_tag "amis.jpg", size: '128x128', class: 'media-object' %>
+    </a>
+    <div class="media-body">
+      <h4 class="media-heading">Martin Amis</h4>
+      <p>This novel proves that Love is an abstract noun, something nebulous. And yet love turns out to be the only part of us that is solid, as the world turns upside down and the screen goes black. And meanwhile time goes about its immemorial work of making everyone look and feel like shit.</p>
+   
+      <!-- Nested media object -->
+<!--       <div class="media hack">
+        <a class="pull-left" href="#">
+        </a>
+        <div class="media-body">
+          <h4 class="media-heading">Julian Barnes</h4>
+          <p>Typical.</p>
+      </div>
+ -->    </div>
+  </div>
+</section> <!-- / recommendations -->
 <div class="buy">
   <%= link_to 'Buy text!', '#', class:  'buy btn btn-custom-lighten'%>
 </div>

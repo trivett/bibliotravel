@@ -148,18 +148,28 @@ input#search {
 /* books#show */
 
 .recommendations {
-  margin: 2em 0;
+  margin: 3em 0;
+  width: 80%;
+  margin: 0 auto 0 5%;
 }
 
 .buy {
   margin-top: 1.5em;
   font-size: 1.2em;
 }
+.buy a {
+  margin-left: 1em;
+}
 
 .hack {
   margin-top: 6em !important;
 }
 
+.tab-content {
+  margin: 0 auto 0 5%;
+  width: 90%;
+  line-height: 1.2em !important;
+}
 /* books#index */
 
 .book {
