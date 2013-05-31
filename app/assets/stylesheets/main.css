@@ -18,6 +18,7 @@ h1, h2, h3, h4 {
 
 p {
   font-family: Domine, Garamond, serif;
+  line-height: 1.2em;
   font-size: 1.2em; }
 
 .hero-unit {
