@@ -2,6 +2,7 @@ Bibliotravel::Application.routes.draw do
 
   match 'discover' => "books#index", :via => :get
   match 'about' => 'welcome#about'
+  match 'thanks' => 'welcome#thanks'
 
 
   resources :books
