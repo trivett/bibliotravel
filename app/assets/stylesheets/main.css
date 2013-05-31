@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Noto+Serif);
 @import url(http://fonts.googleapis.com/css?family=Domine);
-@import url(http://fonts.googleapis.com/css?family=Roboto);
+/*@import url(http://fonts.googleapis.com/css?family=Roboto);*/
 body {
   background-color: #f2f1ed; }
 
@@ -10,16 +10,16 @@ header {
 
 .masthead {
   padding-top: 45px;
-  font-family: Roboto, Helvetica, sans serif;
+  font-family: 'Open Sans', Roboto, Helvetica, sans serif;
   font-size: 18px; }
 
 h1, h2, h3, h4 {
-  font-family: Roboto, Helvetica, sans serif; }
+  font-family: 'Open Sans', Roboto, Helvetica, sans serif; }
 
 p {
-  font-family: Domine, Garamond, serif;
-  line-height: 1.2em;
-  font-size: 1.2em; }
+  font-family: 'Open Sans', Domine, Garamond, serif;
+  line-height: 1.3em;
+  font-size: 1.3em; }
 
 .hero-unit {
   text-align: center;
@@ -193,7 +193,6 @@ section.author {
 .blurb {
   margin-top: 2em;
   margin-left: 15%;
-
 }
 
 .blurb p a {
