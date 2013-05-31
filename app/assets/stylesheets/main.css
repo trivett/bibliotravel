@@ -147,6 +147,10 @@ input#search {
 
 /* books#show */
 
+section.author {
+  margin-bottom: 1.5em;
+}
+
 .recommendations {
   margin: 3em 0;
   width: 80%;
