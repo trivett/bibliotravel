@@ -1,6 +1,7 @@
 class WelcomeController < ApplicationController
   def index
-    city = request.location.city
+    @geo_city = request.location.city
+    @city = 'Here'
     begin
       @city = City.where(:name => city.titleize).first
     rescue
