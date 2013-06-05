@@ -1,10 +1,5 @@
 Bibliotravel::Application.routes.draw do
 
-  get "users/new"
-
-  get "users/create"
-
-  get "users/show"
 
   match 'discover' => "books#index", :via => :get
   match 'about' => 'welcome#about'
@@ -13,9 +8,9 @@ Bibliotravel::Application.routes.draw do
 
 
   resources :books
+  resources :users
   
   get "sessions/create"
-  # get 'welcome/about'
 
 
   root :to => 'welcome#index'
