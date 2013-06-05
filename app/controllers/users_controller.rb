@@ -6,6 +6,18 @@ class UsersController < ApplicationController
     @user = RegularUser.new
   end
 
+  def edit
+    @user = RegularUser.find(current_user.id)
+  end
+
+  def update
+    @user = RegularUser.find(current_user.id)
+    if @user.update_attributes(params[:regular_user])
+      redirect_to root_path
+    else
+      render action: 'edit'
+  end
+
   def create
     @user = RegularUser.new(params[:regular_user])
     if @user.save
