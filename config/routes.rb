@@ -11,8 +11,7 @@ Bibliotravel::Application.routes.draw do
   resources :users
   
   get "sessions/create"
-
-
+  get 'sessions/new'
   root :to => 'welcome#index'
 
   # See how all your routes lay out with "rake routes"
@@ -22,6 +21,7 @@ Bibliotravel::Application.routes.draw do
   # match ':controller(/:action(/:id))(.:format)'
   match 'auth/:provider/callback', to: 'sessions#create'
   match 'auth/failure', to: redirect('/')
+  match 'signin', to: 'sessions#new', as: 'signin'
   match 'signout', to: 'sessions#destroy', as: 'signout'
 
 
