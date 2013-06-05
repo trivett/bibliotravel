@@ -2,6 +2,7 @@
   <% url = (@user.new_record? ? users_path : user_path(@user)) %>
 
   <%= simple_form_for @user, :url => url do |f| %>
+    <%= f.error_notification %>
     <%= f.input :first_name %>
     <%= f.input :last_name %>
     <%= f.input :email %>

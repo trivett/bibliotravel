@@ -10,7 +10,7 @@ Bibliotravel::Application.routes.draw do
   resources :books
   resources :users
   
-  get "sessions/create"
+  post "sessions/create"
   get 'sessions/new'
   root :to => 'welcome#index'
 
