@@ -11,7 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130530014137) do
+ActiveRecord::Schema.define(:version => 20130605180805) do
+
+  create_table "accounts", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "uid"
+    t.string   "username"
+    t.string   "oauth_token"
+    t.string   "oauth_secret"
+    t.datetime "oauth_expires"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  add_index "accounts", ["user_id"], :name => "index_accounts_on_user_id"
 
   create_table "authors", :force => true do |t|
     t.string   "name"
@@ -53,15 +66,5 @@ ActiveRecord::Schema.define(:version => 20130530014137) do
   end
 
   add_index "rankings", ["book_id"], :name => "index_rankings_on_book_id"
-
-  create_table "users", :force => true do |t|
-    t.string   "provider"
-    t.string   "uid"
-    t.string   "name"
-    t.string   "oauth_token"
-    t.datetime "oauth_expires_at"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
-  end
 
 end
