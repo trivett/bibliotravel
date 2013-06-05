@@ -16,6 +16,7 @@ class UsersController < ApplicationController
       redirect_to root_path
     else
       render action: 'edit'
+    end
   end
 
   def create
