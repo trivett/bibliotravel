@@ -175,6 +175,7 @@ section.author {
   width: 90%;
   line-height: 1.2em !important;
 }
+
 /* books#index */
 
 .book {
@@ -209,4 +210,13 @@ section.author {
 
 .recs {
   margin-top: 5em !important;
+}
+
+
+/* FORMS */
+
+.sign_up {
+  margin: 1em 2em;
+  width: 80%;
+  /*text-align: center;*/
 }
