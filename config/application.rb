@@ -61,5 +61,8 @@ module Bibliotravel
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # ssl for secure sessions
+    config.force_ssl = true
   end
 end
