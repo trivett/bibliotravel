@@ -12,10 +12,10 @@ class SessionsController < ApplicationController
       redirect_to root_path
 
     else
-      user = RegularUser.find_by_email(params[:session][:email])
-      if user && user.authenticate(params[:session][:password])
+      user = RegularUser.find_by_email(params[:email])
+      if user && user.authenticate(params[:password])
         session[:user_id]    = user.id
-        redirect_to user
+        redirect_to current_user
 
       else
         flash.now[:error] = "Invalid login credentials."

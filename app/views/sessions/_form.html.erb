@@ -7,7 +7,7 @@
   </p>
   <p>
     <%= label_tag :password %>
-    <%= password_field_tag :password %>
+    <%= password_field_tag :password, params[:password] %>
   </p>
   <p class="button"><%= submit_tag 'Log in' %></p>
   <% end %>
