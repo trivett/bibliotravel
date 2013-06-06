@@ -24,7 +24,7 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       flash[:notice] = 'User successfully created.'
-      redirect_to @user
+      redirect_to current_user
     else
       flash.now[:alert] = 'User creation failed, try again'
       render action: 'new'

@@ -5,11 +5,10 @@ class SessionsController < ApplicationController
 
   def create
     if request.env["omniauth.auth"].present?
-
       oauth = OAuthUser.new(request.env["omniauth.auth"], current_user)
       oauth.login_or_create
       session[:user_id] = oauth.user.id
-      redirect_to root_path
+      redirect_to current_user
 
     else
       user = RegularUser.find_by_email(params[:email])
