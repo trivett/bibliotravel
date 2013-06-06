@@ -25,6 +25,11 @@
           <div class="span4">
             <%= link_to (image_tag "logo-wide.png"),  root_path, :id => "logo", :alt => "BookCities" %>
           </div>
+          <div class="sign_out">
+            <% if current_user.present? %>
+              <%= link_to 'Sign out', signout_path %>
+            <% end %>
+          </div>
 
       </header>
 

@@ -8,6 +8,10 @@ header {
   z-index: 1;
   margin-bottom: 40px; }
 
+header .sign_out {
+  float: right;
+}
+
 .masthead {
   padding-top: 45px;
   font-family: 'Open Sans', Roboto, Helvetica, sans serif;
