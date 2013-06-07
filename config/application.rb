@@ -63,6 +63,6 @@ module Bibliotravel
     config.assets.version = '1.0'
 
     # ssl for secure sessions
-    config.force_ssl = true
+    # config.force_ssl = true
   end
 end
