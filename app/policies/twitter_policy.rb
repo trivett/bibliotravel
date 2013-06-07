@@ -57,6 +57,8 @@ class TwitterPolicy
     else
       first_name = name
       last_name = nil
+    end
     [first_name, last_name]
   end
+
 end
