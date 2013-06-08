@@ -52,7 +52,9 @@ class OAuthUser
         :oauth_expires => @policy.oauth_expires,
         :oauth_secret => @policy.oauth_secret,
         :username => @policy.username
+        :picture
         )
+      @user.update_attribute(picture_url: image)
       @policy.create_callback(@account)
     end
   end
