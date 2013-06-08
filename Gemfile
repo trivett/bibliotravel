@@ -49,7 +49,7 @@ gem 'amazon-ecs'
 gem 'bcrypt-ruby'
 
 # nicer urls
-gem 'friendly_id'
+gem 'inferred_slug'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
