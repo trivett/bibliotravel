@@ -44,8 +44,13 @@ gem 'simple_form'
 # data import
 gem 'nokogiri'
 gem 'amazon-ecs'
+
 # secure password
 gem 'bcrypt-ruby'
+
+# nicer urls
+gem 'friendly_id'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
