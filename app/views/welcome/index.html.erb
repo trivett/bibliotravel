@@ -33,6 +33,7 @@
              <h4><button class="btn btn-custom-lighten btn-block">Share</strong></button></h4>
              <% unless current_user %>
                 <p>No books for your city?  <%= link_to 'Sign up', new_user_path  %> and add them.</p>
+                <p>Already signed up?  <%= link_to 'Sign in', signin_path %></p>
              <% end %>
         </div>
             <div class="span6" class="frontsections">
